@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckboxTableViewCell" id="B9h-Wv-TYw" customClass="CheckboxTableViewCell" customModule="FormApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B9h-Wv-TYw" id="be7-sA-FQW">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="nkS-sK-8Ge">
+                        <rect key="frame" x="16" y="8" width="382" height="89"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="thL-3s-b3X">
+                                <rect key="frame" x="0.0" y="0.0" width="382" height="63.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ea2-EM-dvc">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="63.5"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csv-I3-OBe" customClass="Checkbox" customModule="FormApp" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="12" width="20" height="20"/>
+                                                <color key="backgroundColor" name="background"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Csv-I3-OBe" secondAttribute="height" multiplier="1:1" id="80o-m0-kQ9"/>
+                                                    <constraint firstAttribute="width" constant="20" id="Wgs-kS-LhT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="RmD-cF-cSq"/>
+                                            <constraint firstItem="Csv-I3-OBe" firstAttribute="top" secondItem="ea2-EM-dvc" secondAttribute="top" constant="12" id="gPy-e0-I97"/>
+                                            <constraint firstItem="Csv-I3-OBe" firstAttribute="centerX" secondItem="ea2-EM-dvc" secondAttribute="centerX" id="vu1-jn-NhO"/>
+                                        </constraints>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="I have read and accept the terms and conditions for participating in Boovie 2021." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ikq-24-zBc">
+                                        <rect key="frame" x="40" y="0.0" width="342" height="63.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="textColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check this if you want to proceed." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tG-cf-zZx" userLabel="Error Label">
+                                <rect key="frame" x="0.0" y="69.5" width="382" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="VCg-EO-Hb9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <color key="textColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="nkS-sK-8Ge" secondAttribute="bottom" id="9DH-i5-8rb"/>
+                    <constraint firstItem="nkS-sK-8Ge" firstAttribute="leading" secondItem="be7-sA-FQW" secondAttribute="leading" constant="16" id="byN-8B-MmP"/>
+                    <constraint firstAttribute="trailing" secondItem="nkS-sK-8Ge" secondAttribute="trailing" constant="16" id="dt8-pF-pxs"/>
+                    <constraint firstItem="nkS-sK-8Ge" firstAttribute="top" secondItem="be7-sA-FQW" secondAttribute="top" constant="8" id="q8f-uU-Ndg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="checkboxButton" destination="Csv-I3-OBe" id="O7W-U0-kli"/>
+                <outlet property="checkboxView" destination="ea2-EM-dvc" id="c7s-ag-YwM"/>
+                <outlet property="errorLabel" destination="2tG-cf-zZx" id="xAq-Pn-ez5"/>
+                <outlet property="termsAndConditionsTextView" destination="ikq-24-zBc" id="ILP-yt-Lf7"/>
+            </connections>
+            <point key="canvasLocation" x="-212" y="-1"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="Csv-I3-OBe">
+            <size key="intrinsicContentSize" width="30" height="14"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="background">
+            <color red="0.98799997568130493" green="0.97600001096725464" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FormTextFieldTableViewCell" id="kwt-Cq-KI3" customClass="FormTextFieldTableViewCell" customModule="FormApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="447" height="155"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kwt-Cq-KI3" id="hNM-bM-zwp">
+                <rect key="frame" x="0.0" y="0.0" width="447" height="155"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AGD-Cn-wQH">
+                        <rect key="frame" x="16" y="8" width="415" height="147"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kow-4I-aLF">
+                                <rect key="frame" x="0.0" y="0.0" width="415" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="6Lz-Jl-u42">
+                                <rect key="frame" x="0.0" y="28.5" width="415" height="59.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter name" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DRR-pe-UKd">
+                                        <rect key="frame" x="0.0" y="0.0" width="415" height="34"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="category.text"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your first name." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIo-qf-mcR" userLabel="Error Label">
+                                        <rect key="frame" x="0.0" y="40" width="415" height="19.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19.5" id="SHp-fy-BJW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <color key="textColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-a1-J61" customClass="NextFormButton" customModule="FormApp" customModuleProvider="target">
+                                <rect key="frame" x="124.5" y="96" width="166" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="166" id="jWQ-lL-4tp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" title="Send Invitation"/>
+                                <connections>
+                                    <action selector="cellButtonTapped:" destination="kwt-Cq-KI3" eventType="touchUpInside" id="tNE-3X-ABv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="kow-4I-aLF" firstAttribute="leading" secondItem="AGD-Cn-wQH" secondAttribute="leading" id="YqR-4c-9bo"/>
+                            <constraint firstItem="6Lz-Jl-u42" firstAttribute="leading" secondItem="AGD-Cn-wQH" secondAttribute="leading" id="zW9-Ag-fOw"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="AGD-Cn-wQH" firstAttribute="top" secondItem="hNM-bM-zwp" secondAttribute="top" constant="8" id="5lM-Dr-8Da"/>
+                    <constraint firstItem="AGD-Cn-wQH" firstAttribute="leading" secondItem="hNM-bM-zwp" secondAttribute="leading" constant="16" id="KBm-HL-n9w"/>
+                    <constraint firstAttribute="trailing" secondItem="AGD-Cn-wQH" secondAttribute="trailing" constant="16" id="fVp-VN-H4k"/>
+                    <constraint firstAttribute="bottom" secondItem="AGD-Cn-wQH" secondAttribute="bottom" id="tH0-5y-7SO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="cellButton" destination="dnW-a1-J61" id="yr2-DB-jmZ"/>
+                <outlet property="errorLabel" destination="bIo-qf-mcR" id="wVg-Uj-udh"/>
+                <outlet property="formTextField" destination="DRR-pe-UKd" id="INn-xq-F4W"/>
+                <outlet property="titleLabel" destination="kow-4I-aLF" id="V2R-Lb-LIu"/>
+            </connections>
+            <point key="canvasLocation" x="-264.49275362318843" y="-63.950892857142854"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="dnW-a1-J61">
+            <size key="intrinsicContentSize" width="135" height="37"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="category.text">
+            <color red="0.35699999332427979" green="0.2669999897480011" blue="0.55299997329711914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

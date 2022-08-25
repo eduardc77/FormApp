@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PageProgressCollectionViewCell" id="adC-j6-kpr" customClass="PageProgressCollectionViewCell" customModule="FormApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kMX-qC-ON4">
+                <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19h-Rt-XYQ">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="kdy-J3-0qz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTj-gr-ZXU" userLabel="Progress View">
+                        <rect key="frame" x="0.0" y="46" width="260" height="4"/>
+                        <color key="backgroundColor" name="selected.tab"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="4" id="2v4-SA-yI1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="yTj-gr-ZXU" secondAttribute="bottom" id="4f2-PK-reG"/>
+                    <constraint firstItem="yTj-gr-ZXU" firstAttribute="leading" secondItem="kMX-qC-ON4" secondAttribute="leading" id="Hc9-2r-hqD"/>
+                    <constraint firstAttribute="trailing" secondItem="19h-Rt-XYQ" secondAttribute="trailing" id="PiK-p5-xGd"/>
+                    <constraint firstAttribute="bottom" secondItem="19h-Rt-XYQ" secondAttribute="bottom" id="UXq-h7-H6R"/>
+                    <constraint firstAttribute="trailing" secondItem="yTj-gr-ZXU" secondAttribute="trailing" id="fpp-Gd-rcd"/>
+                    <constraint firstItem="19h-Rt-XYQ" firstAttribute="leading" secondItem="kMX-qC-ON4" secondAttribute="leading" id="iRB-mK-mDA"/>
+                    <constraint firstItem="19h-Rt-XYQ" firstAttribute="top" secondItem="kMX-qC-ON4" secondAttribute="top" id="ohd-5E-ZJ9"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="260" height="54"/>
+            <connections>
+                <outlet property="pageTitleLabel" destination="19h-Rt-XYQ" id="DRB-g8-ebX"/>
+                <outlet property="progressLineView" destination="yTj-gr-ZXU" id="R93-54-Ruu"/>
+            </connections>
+            <point key="canvasLocation" x="-380.625" y="-174.29577464788733"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="selected.tab">
+            <color red="0.21600000560283661" green="0.74099999666213989" blue="0.76499998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
